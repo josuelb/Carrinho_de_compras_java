@@ -65,10 +65,10 @@ public class Operacoes {
                     c = false;
                     break;
                 case 1:
-                    this.usuario.verCpf(this.usuario);
+                    System.out.println(this.usuario.verCpf());
                     break;
                 case 2:
-                    this.usuario.verIdUsuario();
+                    System.out.println(this.usuario.verIdUsuario());
                     break;
                 case 3:
                     this.usuario.altCpf();

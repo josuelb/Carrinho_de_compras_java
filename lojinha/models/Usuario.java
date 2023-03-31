@@ -22,10 +22,6 @@ public class Usuario extends Pessoa implements UsuarioInterface {
         this.carrinho = carrinho;
     }
 
-    public String getUser(){
-        return this.user;
-    }
-
     
 
     public void apresentacao(){
@@ -95,11 +91,9 @@ public class Usuario extends Pessoa implements UsuarioInterface {
     }
 
     @Override
-    public String verCpf(Usuario instancia){
+    public String verCpf(){
         this.dados = entrada.userAtual();
-        boolean v = verif.verifUsuer(this.dados[0],  this.dados[1], instancia);
-        System.out.println(v);
-        if (v){
+        if (verif.verifUsuer(this.dados[0],  this.dados[1], this)){
             return this.getCpf();
         }else{
             System.out.println("User ou senha incorretos!");

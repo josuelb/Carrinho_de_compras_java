@@ -3,28 +3,24 @@ package funcoes;
 import models.Usuario;
 
 public class Verifica {
-    String varTest1, varTest2;
-    public boolean verifUsuer(String user, String password, Usuario usuario){
-        varTest1 = usuario.verUser();
-        varTest2 = usuario.verPasswordIntern();
-
-        if (user == varTest1 && password == varTest2){
+    public static boolean verifUsuer(String user, String password, Usuario usuario){
+        if (usuario.verUser().equals(user) && usuario.verPasswordIntern().equals(password)){
             return true;
         } else {
             return false;
         }
     }
 
-    public boolean verifPassword(String password, Usuario usuario){
-        if (password == usuario.verPasswordIntern()){
+    public static boolean verifPassword(String password, Usuario usuario){
+        if (usuario.verPasswordIntern().equals(password)){
             return true;
         } else {
             return false;
         }
     }
 
-    public boolean verifVericidade(String user, String dataNasc, Usuario usuario){
-        if (user == usuario.verUser() && dataNasc == usuario.verDataNasc()){
+    public static boolean verifVericidade(String user, String dataNasc, Usuario usuario){
+        if (usuario.verUser().equals(user) && usuario.verDataNasc().equals(dataNasc)){
             return true;
         }else {
             return false;

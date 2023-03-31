@@ -7,7 +7,7 @@ public interface UsuarioInterface {
     public abstract String verNome();
     public abstract String verSexo();
     public abstract String verDataNasc();
-    public abstract String verCpf(Usuario instancia);
+    public abstract String verCpf();
     public abstract String verIdUsuario();
     public abstract String verUser();
     public abstract String verPassword();
